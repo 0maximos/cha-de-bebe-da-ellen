@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="Pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css" integrity="sha384-XXXXXX" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-Mg5eXjK+uLd0n4FmM1ePq7E1TWqIjvjqTjEDfQf/rB+8TvqZu1GS1gQUPVFBsw1o" crossorigin="anonymous">
+    <title>Chá de Bebê da Ellen</title>
+</head>
+
+<body>
+    <header>
+        <div class="icone-urso">
+            <img src="/images/icone-cha-de-bebeellen.jpeg" alt="icon de urso chá da Ellen">
+            <h1>Chá de bebê da Ellen</h1>
+        </div>
+    </header>
+    <div class="texto-apr">
+        <ul>
+            <li>Este será o chá de bebê online de Ellen por conta da distância entre os familiares e amigos.</li>
+            <li> Agradecemos desde já todo carinho recebido por todos vocês.</li>
+            <li> Estamos muito felizes com a chegada da pequena Ellen e espero poder compartilhar com você este momento
+                tão especial até o nascimento dela.</li>
+            <span>
+                <i class="fa fa-heart" aria-hidden="true"></i>
+                com amor, Vitoria e Phillip
+            </span>
+        </ul>
+    </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="caixinha">
+                <p>Instruções!</p>
+                <p>1º Quando clicar na frase do mimo, ela será adicionada ao carrinho no canto da tela.</p>
+                <p>2º Depois de escolher os mimos que deseja dar, clique na imagem do carrinho no canto da tela para finalizar.
+                </p>
+                <p>3º Caso toque mais de uma vez o mimo sera adicionado duas vezes, você tem a opção de cancelar o outro mimo, apertando no x 
+                do carrinho de presentes
+                </p>
+                <p>Observação final sobre as Fraldas: <strong>Hipopó, Babysec, Huggies ou Pampers</strong> </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="menu">
+        <h2> Mimos do Chá de Bebê</h2>
+        <ul>
+            <li>
+                <h3>Sabonete líquido + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Shampoo + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Algodão em bolinhas + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Conj Pagão + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Cueiro + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Conjunto mamadeira + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Kit manicure + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Fralda de pano + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Manta + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Talco + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Pomada bepantol baby + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Meia, luva, gorro + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Copo antivazamento + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Surpresa + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Naninha + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Escova pra mamadeira + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Lenço umedecido + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Toalha Fralda + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Toalha com capuz + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Kit escova e pente + Fralda descartável</h3>
+            </li>
+            <li>
+                <h3>Babador + Fralda descartável</h3>
+            </li>
+        </ul>
+        
+    </div>
+    <div id="cart-icon" onclick="toggleCart()">
+        <i class="fas fa-shopping-cart"></i>
+        <span id="cart-count">0</span>
+    </div>
+    <div id="cart" style="display: none;">
+        <button id="close-cart" class="cancel-button" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+        <h2>Carrinho de Presentes</h2>
+        <ul id="cart-items"></ul>
+        <div id="name-input">
+            <label for="name">Seu nome:</label>
+            <input type="text" id="name" name="name" required> <!-- Campo de nome obrigatório -->
+        </div>
+        <button id="confirm-button" onclick="toggleCart()">Confirmar Mimos</button>
+    </div>
+
+    <footer>
+        <p>Desenvolvido com muito carinho por</p>
+        <!-- Contêiner para ícone do Instagram e nome do usuário -->
+        <div class="instagram-container">
+            <!-- Ícone do Instagram -->
+            <a href="https://www.instagram.com/victormaximoc/" target="_blank" rel="noopener noreferrer" class="icon-instagram"><i class="fab fa-instagram"></i></a>
+            <!-- Nome do usuário -->
+            <span class="instagram-username"><a href="https://www.instagram.com/victormaximoc/" target="_blank" rel="noopener noreferrer">@VictorMaximoc</a></span>
+    </footer>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>
